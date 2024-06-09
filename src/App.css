@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap');
+
+body {
+    background-color: #f0f4f8; /* Lighter background for light mode */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.app {
+    width: 400px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s;
+}
+
+.app.dark-mode {
+    background: #000;
+    color: #fff;
+}
+
+.app:not(.dark-mode) {
+    background: #ffffff; /* White background for light mode */
+    color: #333; /* Dark text for better contrast in light mode */
+}
+
+.app h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.input-wrapper {
+    display: flex;
+    margin-top: 15px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 5px 10px;
+    height: 30px;
+    font-size: 14px;
+    border: 1px solid #ccc; /* Border for input in light mode */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: #007BFF; /* Border color on focus for light mode */
+}
+
+.input-wrapper button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Primary button color for light mode */
+    color: #fff;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+}
+
+.app.dark-mode .input-wrapper button {
+    background-color: #666; /* Lighter button background for better visibility */
+}
+
+.app.dark-mode .input-wrapper input {
+    background-color: #333;
+    color: #fff;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    background: #ffffff; /* White background for content in light mode */
+    color: #333; /* Dark text for better contrast */
+    border: 1px solid #ddd; /* Light border for separation */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Light shadow for card visibility */
+}
+
+.app.dark-mode .content {
+    background: #333; /* Darker background for weather card */
+    color: #fff;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); /* Light shadow for card visibility */
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-c {
+    flex-direction: column;
+}
+
+.location {
+    margin-top: 20px;
+}
+
+.location h2 {
+    margin: 0;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.location h2 span {
+    font-size: 14px;
+}
+
+.datetext {
+    font-size: 14px;
+}
+
+.weatherdesc h3 {
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.tempstats {
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.tempstats h1 {
+    font-size: 64px;
+    font-weight: 200;
+    margin: 0;
+}
+
+.tempstats h1 span {
+    font-size: 38px;
+}
+
+.tempstats h3 {
+    font-weight: 400;
+}
+
+.windstats {
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.05); /* Very light background for wind stats */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.app.dark-mode .windstats {
+    background: rgba(255, 255, 255, 0.1); /* Lighter background for wind stats */
+}
+
+.windstats h3 {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 14px;
+    margin-top: 20px;
+}
